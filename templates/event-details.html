@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+    <div class="page-title-area title-bg-four">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container">
+                    <div class="title-item">
+                        <h2>Events</h2>
+                        <ul>
+                            <li>
+                                <a href="{% url 'index' %}">Home</a>
+                            </li>
+                            <li>
+                                <span>Events</span>
+                            </li>
+                        </ul>  path('about/', about, name='about'),
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="event-area four ptb-100">
+        <div class="container">
+            <div class="row">
+                {% for event in events %}
+                <div class="col-lg-6">
+                    <div class="event-item">
+                        <img src="{{ event.image.url }}" alt="Event">
+                        <div class="inner">
+                            <h4>{{ event.start_time|date:"d" }} <span>{{ event.start_time|date:"M" }}</span></h4>
+                            <h3>
+                                <a href="{% url 'event-details' event.id %}">{{ event.title }}</a>
+                            </h3>
+                            <ul>
+                                <li>
+                                    <i class="icofont-stopwatch"></i>
+                                    <span>{{ event.start_time|time }} - {{ event.start_time|time }}</span>
+                                </li>
+                                <li>
+                                    <i class="icofont-location-pin"></i>
+                                    <span>{{ event.location }}</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+              
+            </div>
+            <div class="pagination-area">
+                <ul>
+                    <li>
+                        <a href="#">Prev</a>
+                    </li>
+                    <li>
+                        <a class="active" href="#">1</a>
+                    </li>
+                    <li>
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#">Next</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}

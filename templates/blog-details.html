@@ -1,0 +1,267 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+    <div class="page-title-area title-bg-seven">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container">
+                    <div class="title-item">
+                        <h2>{{ blog.title }}</h2>
+                        <ul>
+                            <li>
+                                <a href="{% url 'index' %}">Home</a>
+                            </li>
+                            <li>
+                                <span>{{ blog.title }}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="blog-details-area ptb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="details-item">
+                        <div class="details-img">
+                            <img src="{{ blog.image1.url }}" alt="Details">
+                            <ul>
+                                <li>
+                                    <i class="icofont-calendar"></i>
+                                    {{ blog.time }}
+                                </li>
+                                <li>
+                                    <i class="icofont-user-alt-3"></i>
+                                    By - <a href="#">{{ blog.author }}</a>
+                                </li>
+                            </ul>
+                            <h2>{{ blog.title }}</h2>
+                            <p>{{ blog.overview }}</p>
+                           
+                            <div class="img">
+                                <div class="row align-items-center">
+                                    <div class="col-4 col-sm-4 col-lg-4">
+                                        <img src="{{ blog.image2.url }}" alt="Details">
+                                    </div>
+                                    <div class="col-8 col-sm-8 col-lg-8">
+                                        <p>{{ blog.description }}.</p>
+                                    </div>
+                                </div>
+                            </div>
+                          
+                            <!-- <div class="img-area">
+                                <div class="row">
+                                    <div class="col-sm-6 col-lg-6">
+                                        <img src="{% static 'assets/img/blog/blog1.jpg' %}" alt="Details">
+                                    </div>
+                                    <div class="col-sm-6 col-lg-6">
+                                        <img src="{% static 'assets/img/blog/blog2.jpg' %}" alt="Details">
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                        <!-- <div class="details-share">
+                            <div class="row">
+                                <div class="col-sm-6 col-lg-6">
+                                    <div class="left">
+                                        <ul>
+                                            <li>
+                                                <span>Share:</span>
+                                            </li>
+                                            <li>
+                                                <a href="#" target="_blank">
+                                                    <i class="icofont-facebook"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" target="_blank">
+                                                    <i class="icofont-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" target="_blank">
+                                                    <i class="icofont-youtube-play"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" target="_blank">
+                                                    <i class="icofont-instagram"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-6">
+                                    <div class="right">
+                                        <ul>
+                                            <li>
+                                                <span>Tags:</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">Women</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Children</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Youths and Adolescents</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="details-comment">
+                            <h3>Comments (02)</h3>
+                            <ul>
+                                {% for comment in comments %}
+                                <li>
+                                    <img src="{% static 'assets/img/blog/blog-comment1.png' %}" alt="Details">
+                                    <h4>{{ comment.username }}</h4>
+                                    <span>{{ comment.timestamp|date:"d M, y" }}</span>
+                                    <p>{{ comment.comment }}</p>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="details-post">
+                            <h3>Your comment</h3>
+                            <form method="POST">
+                                {% csrf_token %}
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label>
+                                                <i class="icofont-user-alt-3"></i>
+                                            </label>
+                                            <input type="text" name="name" class="form-control" placeholder="name">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label>
+                                                <i class="icofont-ui-email"></i>
+                                            </label>
+                                            <input type="email" name="email" class="form-control" placeholder="Email">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label>
+                                                <i class="icofont-comment"></i>
+                                            </label>
+                                            <textarea name="message" rows="8" class="form-control"
+                                                placeholder="Write comment"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <button type="submit" class="btn common-btn">Post A Comment</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="widget-area">
+                        <div class="search widget-item">
+                            <form>
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <button type="submit" class="btn">
+                                    <i class="icofont-search-1"></i>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="admin widget-item">
+                            <img src="{{ blog.author_image.url }}" alt="Admin">
+                            <h4>{{ blog.author_name }}</h4>
+                            <span>{{ blog.author }}</span>
+                            <ul>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class="icofont-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class="icofont-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class="icofont-youtube-play"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class="icofont-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="post widget-item">
+                            <h3>Popular Post</h3>
+                            {% for blog in recents %}
+                            <div class="post-inner">
+                                <ul class="align-items-center">
+                                    <li>
+                                        <img src="{{ blog.image1.url}}" alt="Details">
+                                    </li>
+                                    <li>
+                                        <h4>
+                                            <a href="#">{{ blog.title }}</a>
+                                        </h4>
+                                        <p>By - <a href="#">{{ blog.author }}</a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="common-right-content widget-item">
+                            <h3>Categories</h3>
+                            <ul>
+                                <li>
+                                    <a href="#">Education</a>
+                                </li>
+                                <li>
+                                    <a href="#">Entreprenuership</a>
+                                </li>
+                                <li>
+                                    <a href="#">National Meeting</a>
+                                </li>
+                              
+                                <li>
+                                    <a href="#">Tour</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="instagram widget-item">
+                            <h3>Instagram post</h3>
+                            <div class="row m-0">
+                                {% for instagram in instagram %}
+                                <div class="col-4 col-sm-3 col-lg-4 p-0">
+                                    <div class="instagram-item">
+                                        <img src="{{ instagram.image.url }}" alt="Instagram">
+                                        <a href="#">
+                                            <i class="icofont-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                {% endfor %}
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+ {% endblock content %}

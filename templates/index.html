@@ -1,0 +1,441 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="banner-area">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="banner-content">
+                                <span>Let’s attain a society that protects children</span>
+                                <h1>Help youth to attain their full life potential</h1>
+                                <p>and community sustainable development.</p>
+                                <div class="banner-btn-area">
+                                    <a class="common-btn banner-btn" href="#">Get To Know Us</a>
+                                    <a class="common-btn" href="#">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="banner-img">
+                                <img src="{% static 'assets/img/banner/banner-main1.jpg' %}" alt="Banner">
+                                <img src="{% static 'assets/img/banner/banner-main2.png' %}" alt="Banner">
+                                <div class="video-wrap">
+                                    <button class="js-modal-btn" data-video-id="uemObN8_dcw">
+                                        <i class="icofont-ui-play"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="dream-area pt-100 pb-70">
+        <div class="container">
+            <div class="section-title">
+                <span class="sub-title">Fulfill our dream</span>
+                <h2>Mission to make a smile</h2>
+                <p>To provide help to the society in understanding different ways in helping children and
+                    youth out of the negative life challenges as well as to enhance coordination and promo-
+                    tion of the society programs relating to the life of the society members.</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-4">
+                    <div class="dream-item">
+                        <h3>
+                            <a href="">To support on provision of education to all school age children.</a>
+                        </h3>
+                        <p>To the children.</p>
+                        <span class="sub-span">01</span>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="dream-item">
+                        <h3>
+                            <a href="">To support and strengthen the social-economic relationship between youth,
+                                government and the society.</a>
+                        </h3>
+                        <p>To the Youths.</p>
+                        <span class="sub-span">02</span>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="dream-item">
+                        <h3>
+                            <a href="">To empower and enhance public with means on how to eradicate poverty
+                                and to empower women and youth in entrepreneurship skills</a>
+                        </h3>
+                        <p>To Women and Youths.</p>
+                        <span class="sub-span">03</span>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="dream-item">
+                        <h3>
+                            <a href="donations.html">To enhance and create a productive and self- sustaining youth population, capable
+                                of protecting themselves and their communities against the risk of HIV/AIDS,</a>
+                        </h3>
+                        <p>To the society.</p>
+                        <span class="sub-span">04</span>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="dream-item">
+                        <h3>
+                            <a href="donations.html">Malaria and other diseases.</a>
+                        </h3>
+                        <p>To the society.</p>
+                        <span class="sub-span">05</span>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="dream-item">
+                        <h3>
+                            <a href="donations.html">To build the capacity of youth on improving and protecting natural resources and
+                                environment</a>
+                        </h3>
+                        <p>To the Society.</p>
+                        <span class="sub-span">06</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="about-area pt-100 pb-70">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-img">
+                        <img src="{% static 'assets/img/about/about-main1.png' %}" alt="About">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <div class="section-title">
+                            <span class="sub-title">About us</span>
+                            <h3>Youth Aid Education Possible Changes Organization (YAPO)</h3>
+                        </div>
+                        <span class="about-span">is a Non-Governmental
+                            Organization exists to promote Gender Equality and Development on education, health
+                            and environmental sustainability for youth, women and girls in Tanzania.</span>
+                        <p>Since its
+                            inception in 2017 YAPO has been responding to gender based violence, promote right
+                            based access to education and health, and improve sustainable livelihood for </p>
+                        <p>youth, children, girls and women by preventing child early and forced marriage, teenage
+                            pregnancies, Trafficking In Person of children and providing psychosocial and material
+                            support to survivors of violence..</p>
+                        <div class="about-btn-area">
+                            <a class="common-btn about-btn" href="#">Get To Know More</a>
+                            <a class="common-btn" href="#">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="feature-area pt-100 pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-lg-4">
+                    <div class="feature-item two">
+                        <i class="flaticon-solidarity"></i>
+                        <h3>
+                            <a href="#">To The children</a>
+                        </h3>
+                        <p>CTo support on provision of education to all school age children.</p>
+                        <a class="feature-btn" href="{% url 'about' %}">Read More</a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="feature-item two">
+                        <i class="flaticon-donation"></i>
+                        <h3>
+                            <a href="#">To The Youths</a>
+                        </h3>
+                        <p>To support and strengthen the social-economic relationship between youth, government and the society.</p>
+                        <a class="feature-btn" href="{% url 'about' %}">Read More</a>
+                    </div>
+                </div>
+                <div class="col-sm-6 offset-sm-3 offset-lg-0 col-lg-4">
+                    <div class="feature-item two">
+                        <i class="flaticon-love"></i>
+                        <h3>
+                            <a href="#">To Women</a>
+                        </h3>
+                        <p> To empower women and youth in entrepreneurship skills.</p>
+                        <a class="feature-btn" href="{% url 'about' %}">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="work-area pt-100 pb-70">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="work-content">
+                        <div class="section-title">
+                            <span class="sub-title">Our programs</span>
+                            <h2>We exist for non-profits, social enterprises, community groups</h2>
+                        </div>
+                        <ul>
+                            <li>
+                                <h3><span>01</span>Youth empowerment</h3>
+                            </li>
+                            <li>
+                                <h3><span>02</span>Women and Girls empowerment</h3>
+                            </li>
+                            <li>
+                                <h3><span>03</span>Children Protection</h3>
+                            </li>
+                            <li>
+                                <h3><span>04</span>Health Programs</h3>
+                            </li>
+                            <li>
+                                <h3><span>05</span>Support HIV/AIDS Victims</h3>
+                            </li>
+                            <li>
+                                <h3><span>06</span>Support Orphans and Vulnerable Children (OVC &MVC)</h3>
+                            </li>
+                            <li>
+                                <h3><span>07</span>Community support</h3>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="work-img">
+                        <img src="{% static 'assets/img/work/work1.jpg' %}" alt="Work">
+                        <img src="{% static 'assets/img/work/work2.jpg' %}" alt="Work">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="donations-area pt-100 pb-70">
+        <div class="container">
+            <div class="section-title">
+                <span class="sub-title">Projects Undertaken</span>
+                <h2>Be the reason of someone smiles</h2>
+                <p>Let’s attain a society that protects children
+                    Help youth to attain their full life potential and community sustainable development.</p>
+            </div>
+            <div class="row">
+                {% for project in projects %}
+                <div class="col-sm-6 col-lg-4">
+                    <div class="donation-item">
+                        <div class="img">
+                            <img src="{{ project.image.url }}" alt="Donation">
+                            <a class="common-btn" href="{% url 'project-details' project.id %}">Read More</a>
+                        </div>
+                        <div class="inner">
+                            <div class="top">
+                                <h3>
+                                    <a href="{% url 'project-details' project.id %}">{{ project.name }}</a>
+                                </h3>
+                                <p>{{ project.overview }}</p>
+                            </div>
+                            <div class="bottom">
+                                <div class="skill">
+                                    <div class="skill-bar skill1 wow fadeInLeftBig">
+                                        <span class="skill-count1">{{ project.percent }}</span>
+                                    </div>
+                                </div>
+                                <ul>
+                                    <li>Raised: {{ project.raised_amount }}</li>
+                                    <li>Goal: {{ project.goal_amount }}</li>
+                                </ul>
+                                <h4>Sponsored by <span>{{ project.sponsor }}</span></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="gallery-area two pt-100 pb-70">
+        <div class="container-fluid">
+            <div class="section-title">
+                <span class="sub-title">Our Partners</span>
+                <h2>Our Partners</h2>
+                <p>Our Partners</p>
+            </div>
+            <div class="gallery-slider owl-theme owl-carousel">
+                <div class="gallery-item">
+                    <a href="" data-lightbox="roadtrip">
+                        <img src="{% static 'assets/img/gallery/gallery1.jpg' %}" alt="Gallery">
+                        <i class="icofont-eye"></i>
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="assets/img/gallery/gallery2.jpg" data-lightbox="roadtrip">
+                        <img src="{% static 'assets/img/gallery/gallery2.jpg' %}" alt="Gallery">
+                        <i class="icofont-eye"></i>
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="assets/img/gallery/gallery3.jpg" data-lightbox="roadtrip">
+                        <img src="{% static 'assets/img/gallery/gallery3.jpg' %}" alt="Gallery">
+                        <i class="icofont-eye"></i>
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="assets/img/gallery/gallery4.jpg" data-lightbox="roadtrip">
+                        <img src="{% static 'assets/img/gallery/gallery4.jpg' %}" alt="Gallery">
+                        <i class="icofont-eye"></i>
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="assets/img/gallery/gallery5.jpg" data-lightbox="roadtrip">
+                        <img src="{% static 'assets/img/gallery/gallery5.jpg' %}" alt="Gallery">
+                        <i class="icofont-eye"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="event-area pt-100 pb-70">
+        <div class="container">
+            <div class="section-title">
+                <span class="sub-title">Our events</span>
+                <h2>Upcoming events near you</h2>
+            </div>
+            <div class="row align-items-center">
+                {% for event in events %}
+                <div class="col-lg-6">
+                    <div class="event-item">
+                        <img src="{{ event.image.url }}" alt="Event">
+                        <div class="inner">
+                            <h4>{{ event.day }} <span>{{ event.month }} </span></h4>
+                            <h3>
+                                <a href="{% url 'event-details' event.id %}">{{ event.title }} </a>
+                            </h3>
+                            <ul>
+                                <li>
+                                    <i class="icofont-stopwatch"></i>
+                                    <span>{{ event.duration }} </span>
+                                </li>
+                                <li>
+                                    <i class="icofont-location-pin"></i>
+                                    <span>{{ event.location }} </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+                <div class="col-lg-6">
+                    {% for event in recent_events %}
+                    <div class="event-item-right">
+                        <h4>{{ event.day }} <span>{{ event.month }}</span></h4>
+                        <h3>
+                            <a href="{% url 'event-details' event.id %}">{{ event.title }}</a>
+                        </h3>
+                        <ul>
+                            <li>
+                                <i class="icofont-stopwatch"></i>
+                                <span>{{ event.duration }}</span>
+                            </li>
+                            <li>
+                                <i class="icofont-location-pin"></i>
+                                <span>{{ event.location }}</span>
+                            </li>
+                        </ul>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="gallery-area pt-100 pb-70">
+        <div class="container">
+            <div class="section-title">
+                <span class="sub-title">Our gallery</span>
+                <h2>Discover the best things we do</h2>
+                <p>We exist for non-profits, social enterprises, community groups, activists,lorem politicians and
+                    individual citizens that are making.</p>
+            </div>
+            <div class="row">
+                {% for gallery in gallerys %}
+                <div class="col-sm-6 col-lg-4">
+                    <div class="gallery-item">
+                        <a href="{{ gallery.image.url }}" data-lightbox="roadtrip">
+                            <img src="{{ gallery.image.url }}" alt="Gallery">
+                            <i class="icofont-eye"></i>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="blog-area pt-100 pb-70">
+        <div class="container">
+            <div class="section-title">
+                <span class="sub-title">Latest news & blog</span>
+                <h2>Latest blog</h2>
+                <p>We exist for non-profits, social enterprises, community groups, activists,lorem politicians and
+                    individual citizens that are making.</p>
+            </div>
+            <div class="row">
+                {% for blog in blogs %}
+                <div class="col-sm-6 offset-sm-3 offset-lg-0 col-lg-4">
+                    <div class="blog-item">
+                        <div class="top">
+                            <a href="{% url 'blog-details' blog.id %}">
+                                <img src="{{ blog.image1.url }}" alt="Blog">
+                            </a>
+                        </div>
+                        <div class="bottom">
+                            <ul>
+                                <li>
+                                    <i class="icofont-calendar"></i>
+                                    <span>{{ blog.time }}</span>
+                                </li>
+                                <li>
+                                    <i class="icofont-user-alt-3"></i>
+                                    <span>By:</span>
+                                    <a href="#">{{ blog.author }}</a>
+                                </li>
+                            </ul>
+                            <h3>
+                                <a href="{% url 'blog-details' blog.id %}">{{ blog.title }}</a>
+                            </h3>
+                            <p>{{ blog.overview }}</p>
+                            <a class="blog-btn" href="{% url 'blog-details' blog.id %}">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}

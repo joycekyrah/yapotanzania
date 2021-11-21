@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zxx">
+{% include 'head.html' %}
+
+<body>
+    <!-- start per-loader -->
+    <div class="loader">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="pre-box-one">
+                    <div class="pre-box-two"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="left">
+                        <ul>
+                            <li>
+                                <i class="icofont-location-pin"></i>
+                                <a href="#">Kilimanjaro</a>
+                            </li>
+                            <li>
+                                <i class="icofont-ui-call"></i>
+                                <a href="tel:+0123456987">+255 776-456-987</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="right">
+                        <ul>
+                            <li>
+                                <span>Follow Us:</span>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="icofont-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="icofont-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="icofont-youtube-play"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="icofont-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                   
+                        <div class="header-search">
+                            <i id="search-btn" class="icofont-search-2"></i>
+                            <div id="search-overlay" class="block">
+                                <div class="centered">
+                                    <div id="search-box">
+                                        <i id="close-btn" class="icofont-close"></i>
+                                        <form>
+                                            <input type="text" class="form-control" placeholder="Search..." />
+                                            <button type="submit" class="btn">Search</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end per-loader -->
+    {% include 'navbar.html' %}
+    {% block content %}
+
+    {% endblock content %}
+    {% include 'scripts.html' %}
+    {% include 'footer.html' %}
+</body>
+
+</html>
