@@ -85,15 +85,21 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="e{% url 'events' %}">
+                                <a href="{% url 'events' %}">
                                     <i class="icofont-simple-right"></i>
                                     Events
                                 </a>
                             </li>
                             <li>
-                                <a href="e{% url 'gallery' %}">
+                                <a href="{% url 'gallery' %}">
                                     <i class="icofont-simple-right"></i>
                                     Gallery
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'project' %}">
+                                    <i class="icofont-simple-right"></i>
+                                    Projects
                                 </a>
                             </li>
                         </ul>
@@ -108,7 +114,7 @@
                             <ul>
                                 <li>
                                     <i class="icofont-location-pin"></i>
-                                    <a href="#">Plot No 154, Block C, Pwani Street 14122 Kinduchi Ward, Dar Es Salaam- Tanzania. 
+                                    <a href="{% url 'contact' %}">Plot No 154, Block C, Pwani Street 14122 Kunduchi Ward, Dar Es Salaam- Tanzania. 
                                     </a>
                                 </li>
                                 <li>
@@ -134,7 +140,7 @@
             </div>
         </div>
         <div class="copyright-area">
-            <p>Copyright ©2021 YaPo. Designed By <a href="https://hibootstrap.com/" target="_blank">YaPo</a>
+            <p>Copyright ©2021 YaPo.
             </p>
         </div>
     </div>
