@@ -92,3 +92,45 @@ class Instagram(models.Model):
 
     def __str__(self):
         return self.title
+
+class YoutubeVideo(models.Model):
+    title = models.CharField(max_length=100)
+    link = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.title
+
+class Logo(models.Model):
+    title = models.CharField(max_length=100)
+    image = models.FileField()
+
+    def __str__(self):
+        return self.title
+
+class TwitterLink(models.Model):
+    title = models.CharField(max_length=100)
+    overview = models.TextField()
+    timestamp = models.DateTimeField()
+    hashtag = models.CharField(max_length=100)
+    link = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.title
+
+class YoutubeLink(models.Model):
+    title = models.CharField(max_length=100)
+    timestamp = models.DateTimeField(auto_now_add=True)
+    link = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.title
+
+class FacebookLink(models.Model):
+    title = models.CharField(max_length=100)
+    overview = models.TextField()
+    timestamp = models.DateTimeField()
+    hashtag = models.CharField(max_length=100)
+    link = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.title

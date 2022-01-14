@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from core.models import Gallery, Blog, Event, Contact, Leader, Comment, Project, Instagram
+from core.models import Gallery, Blog, Event, Contact, Leader, Comment, Project, Instagram, YoutubeVideo, Logo, TwitterLink, YoutubeLink, FacebookLink
 
 def index(request):
     leaders = Leader.objects.all()
@@ -8,19 +8,31 @@ def index(request):
     recent_events = Event.objects.all()
     gallerys = Gallery.objects.all()
     projects = Project.objects.all()
+    youtubeVideo = YoutubeVideo.objects.first()
+    logo = Logo.objects.all()
+    twitter_links = TwitterLink.objects.order_by('-timestamp')[:3]
+    youtube_links = YoutubeLink.objects.order_by('-timestamp')[:3]
+    facebook_links = FacebookLink.objects.order_by('-timestamp')[:3]
     context = {
+        'logos': logo,
+        'youTubeVideo': youtubeVideo,
         'gallerys': gallerys,
         'events': events,
         'recent_events': recent_events,
-         'blogs': blogs,
-         'leaders': leaders,
-         'projects': projects,
+        'blogs': blogs,
+        'leaders': leaders,
+        'projects': projects,
+        'twitter_links': twitter_links,
+        'youtube_links': youtube_links,
+        'facebook_links':  facebook_links,
 
     }
     return render(request, 'index.html', context)
 
 def about(request):
+    youtubeVideo = YoutubeVideo.objects.first()
     context = {
+         'youTubeVideo': youtubeVideo,
 
     }
     return render(request, 'about.html', context)
