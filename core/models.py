@@ -73,7 +73,7 @@ class Comment(models.Model):
         return self.username
 
 class Project(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=300)
     image = models.FileField()
     overview = models.CharField(max_length=250)
     percent = models.CharField(max_length=10)
